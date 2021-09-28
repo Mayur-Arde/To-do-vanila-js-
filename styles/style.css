@@ -66,6 +66,9 @@ body{
   padding: 5px 10px;
   background-color: var(--danger);
   border: none;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
   visibility: hidden;
 }
 
@@ -123,7 +126,6 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
 }
 
 .todo-container{
