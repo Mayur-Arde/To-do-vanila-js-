@@ -57,7 +57,8 @@ body{
   border: 2px solid var(--voilet);
 }
 
-.btn-submit:hover{
+.btn-submit:hover
+, .btn-edit:hover , .btn-delete:hover{
   background-color: var(--voilet);
   color: var(--white);
 }
@@ -73,10 +74,14 @@ body{
 }
 
 .btn-edit , .btn-delete{
-  background-color: var(--voilet);
-  padding: 2px;
+  /* width: 12px; */
+  height: auto;
+  background-color: var(--white);
+  color: var(--voilet);
+  padding: 2px 3px;
   border: none;
 }
+
 
 .btn:focus , .todo:focus{
   outline: none;
@@ -100,6 +105,7 @@ body{
 
 .success{
   color: var(--success);
+  
 }
 
 .danger{
@@ -118,6 +124,15 @@ body{
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+}
+
+.todo-container{
+  margin-top: 1rem;
+  /* visibility: hidden; */
+}
+
+.show-container{
+  visibility: visible;
 }
 
 .todo{
