@@ -46,7 +46,6 @@ body{
 
 /* buttons */
 .btn{
-  /* width: 20px; */
   border-radius: 5px;
 }
 
@@ -67,6 +66,7 @@ body{
   padding: 5px 10px;
   background-color: var(--danger);
   border: none;
+  visibility: hidden;
 }
 
 .btn-clear:hover{

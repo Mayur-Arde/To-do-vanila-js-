@@ -12,13 +12,13 @@ const btnClear =document.getElementById('btn-clear');
 let editElement;
 let editFlag = false;
 let editId = '';
-
+let id = new Date().getTime().toString();
+console.log(id);
 // functions 
 const addItem = function (e) {
   e.preventDefault();
   // console.log(e);
-  const todoValue = todo.value;
-  
+  const todoValue = todo.value;  
   // console.log(todoValue);
   if (todoValue && !editFlag){
     const element = document.createElement('article');
@@ -37,6 +37,7 @@ const addItem = function (e) {
     list.appendChild(element);
     // show todoContainer 
     todoContainer.classList.add('show-container');
+    btnClear.style.visibility = 'visible';
     showAlert('✌ Task Added to list' ,'success');
     setBackDefault();
   }else if(todoValue && editFlag){
@@ -44,6 +45,16 @@ const addItem = function (e) {
   }else{
     showAlert(`🚫Enter your Task to add`, 'danger');
   }
+}
+
+const clearList = function (e){
+  e.preventDefault();
+  const items = document.querySelectorAll('.todo-item');
+  items.forEach(item => {
+    item.remove(item);
+  });
+  showAlert('All Tasks deleted', 'success');
+  setBackDefault();
 }
 
 // show alert message function 
@@ -62,3 +73,4 @@ const setBackDefault = function (){
 }
 // Event Listerners
 btnSubmit.addEventListener('click', addItem);
+btnClear.addEventListener('click', clearList);
