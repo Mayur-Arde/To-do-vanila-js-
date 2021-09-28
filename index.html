@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <section class="container">
+    <!-- form  -->
+    <form id=todo-form class="todo-form">
+      <p class="alert" id="alert"></p>
+      <h2>To Do List.</h2>
+      <div class="form-control">
+        <input type="text" id=todo class="todo" placeholder="Eg:Array method revision">
+        <button class="btn btn-submit" id="btn-submit">Submit</button>
+      </div>
+      <!-- list  -->
+      <div class="todo-container" id="todo-container">
+        <div class="todo-list" id="todo-list">
+          <div class="todo-item" id="todo-item">
+            <p class="title" id="title">Buy me</p>
+            <div class="button-conatiner">
+              <button class="btn btn-edit" id="btn-edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-delete" id="btn-delete">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- button clear  -->
+      <button class="btn btn-clear" id="btn-clear">Clear</button>
+    </form>
+  </section>
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
