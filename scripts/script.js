@@ -7,7 +7,7 @@ const todoContainer = document.getElementById('todo-container');
 const list = document.getElementById('todolist')
 const item = document.getElementById('todo-item');
 const btnClear = document.getElementById('btn-clear');
-
+// const title = document.getElementById('title');
 // program  variable
 let editElement;
 let editFlag = false;
@@ -42,8 +42,8 @@ const addItem = function (e) {
     btnEdit.addEventListener('click', editTask);
     const btnDelete = element.querySelector('.btn-delete');
     btnDelete.addEventListener('click', deleteTask);
-
- 
+    const taskDone = element.querySelector('.title');
+    taskDone.addEventListener('click', completedTask);
     // append element to child
     list.appendChild(element);
     // show todoContainer 
@@ -76,6 +76,41 @@ const clearList = function (e){
     showAlert('🚫 No Task to delete', 'danger');
   }
 }
+
+// const completedTask = function(e){
+//   // e.preventDefault();
+//   const done = document.querySelectorAll('.title');
+//   if (done.length > 0){
+//     for (done of done){
+//       console.log('hello');
+//     };
+
+//     // done.forEach(task => {
+//       // item.remove(item);
+//       // console.log(task);
+//       // task.style.textDecoration = 'line-through';
+//       // task.classList.add('task-done');
+      
+//       // task.classList.remove('task-done');
+//       // editFlag = false;
+//       // showAlert('🚫 All Tasks deleted', 'success');
+//       // todoContainer.classList.remove('show-container');
+//       // btnClear.style.visibility = 'hidden';
+//       // setBackDefault();
+//   }else{
+//     showAlert('🚫 No Task to delete', 'danger');
+//   }
+// }
+
+const completedTask = function(e){
+  e.preventDefault();
+  const para = e.currentTarget;
+  console.log(para);
+  para.classList.toggle('task-done');
+  // showAlert(`Task is Completed😁 `, 'success')
+  setBackDefault();
+}
+
 
 // edit task function 
 const editTask = function(e){
@@ -118,3 +153,6 @@ const setBackDefault = function (){
 // Event Listerners
 btnSubmit.addEventListener('click', addItem);
 btnClear.addEventListener('click', clearList);
+// taskDone.addEventListener('click', () =>{
+//   console.log('hello');
+// })

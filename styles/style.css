@@ -148,7 +148,16 @@ body{
 .title{
   text-align: left;
   width:70%;
-  
+  cursor: pointer;
+  /* text-decoration: line-through; */
+}
+
+.task-done{
+  text-decoration: line-through;
+}
+
+.hide{
+  display: none;
 }
 
 /* mobile responsive */
